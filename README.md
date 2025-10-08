@@ -1,7 +1,9 @@
-#Descripción General
+# Sistema de Gestión de Proyectos SENA
+
+### Descripción General
     Plataforma que permite a instructores y aprendices del SENA registrar, gestionar y hacer seguimiento de los proyectos formativos del programa ADSO. La app facilita la comunicación, el seguimiento de avances, la entrega de evidencias y la evaluación de proyectos en tiempo real.
 
-#Stakeholders
+### Stakeholders
     Instructores: Supervisan avances, asignan tareas, retroalimentan proyectos.
     Aprendices: Registran avances, suben entregables, consultan retroalimentación.
     Coordinadores: Generan reportes de seguimiento global del grupo o centro.
