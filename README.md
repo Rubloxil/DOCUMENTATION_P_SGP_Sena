@@ -1,6 +1,6 @@
 # Sistema de Gestión de Proyectos SENA
 
-![!image alt](img/1(3).png)
+![](img/1(3).png)
 
 ### Descripción General
     Plataforma que permite a instructores y aprendices del SENA registrar, 
