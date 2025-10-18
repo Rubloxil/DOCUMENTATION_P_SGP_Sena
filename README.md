@@ -14,6 +14,6 @@
     Coordinadores: Generan reportes de seguimiento global del grupo o centro.
     SENA – Centro de Formación: Beneficiario institucional.
 
-    catlos come papas 
+     
 
 
