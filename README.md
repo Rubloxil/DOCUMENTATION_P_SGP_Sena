@@ -12,7 +12,7 @@
     Instructores: Supervisan avances, asignan tareas, retroalimentan proyectos.
     Aprendices: Registran avances, suben entregables, consultan retroalimentación.
     Coordinadores: Generan reportes de seguimiento global del grupo o centro.
-    SENA – Centro de Formación: Beneficiario institucional
+    SENA – Centro de Formación: Beneficiario institucional.
 
      
 
