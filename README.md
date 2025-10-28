@@ -12,9 +12,6 @@
     Coordinadores: Generan reportes de seguimiento global del grupo o centro.
     SENA – Centro de Formación: Beneficiario institucional.
 
-<<<<<<< HEAD
-     
-=======
 ### Integrantes:
     *Dilan David Rueda
     *Rubiel Rodriguez
