@@ -1,7 +1,5 @@
-# 📘 Proyecto: Gestor de Proyectos de Aprendices e Instructores del SENA (Seguimiento de Proyectos ADSO)
-
-## 🧩 Requisitos Funcionales
-
+# 📘🧩 Requisitos Funcionales Y no fucionales
+## Gestor de Proyectos de Aprendices e Instructores del SENA (Seguimiento de Proyectos ADSO)
 ### 1. Gestión de Usuarios
 - Registro de aprendices e instructores con datos personales y académicos.  
 - Autenticación de acceso al sistema.
@@ -47,7 +45,4 @@
 - Facilidad de añadir nuevas funcionalidades sin afectar las existentes.
 
 ---
-
-📅 **Elaborado por:** Equipo de Desarrollo – SENA  
-📍 **Versión:** 1.0  
-📖 **Fecha:** Octubre 2025
+### version v0.1
