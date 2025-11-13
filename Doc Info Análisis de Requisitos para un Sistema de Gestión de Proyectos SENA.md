@@ -1,97 +1,147 @@
-# 📄 Documento Informativo: Análisis de Requisitos para un Sistema de Gestión de Proyectos SENA V 001
-#### NOTA IMPORTANTE: Documeto informativo de resumen obtenido en base a las entrevistas
-## 🧭 Resumen
-El análisis de las entrevistas revela una necesidad crítica y compartida entre instructores y aprendices para un sistema digital centralizado que optimice el seguimiento y la gestión de proyectos académicos.  
+# 📄 Documento Informativo: Análisis de Requisitos para el Sistema de Gestión de Proyectos SENA  
+**Versión:** V 002
+**Fuente:** Resumen elaborado a partir de entrevistas con instructores y aprendices.  
+**Propósito:** Servir como documento base para la definición de requisitos funcionales y técnicos del sistema.  
 
-El problema fundamental identificado es la falta de agilidad y visibilidad en tiempo real del progreso de los proyectos, lo que dificulta la supervisión por parte de los instructores y la coordinación entre los estudiantes.  
+---
 
-Las funcionalidades indispensables para una versión inicial incluyen:
-- 📊 Visualización del porcentaje de avance  
-- 📅 Claridad en las fechas de entrega  
-- 📦 Definición de los entregables finales  
+## 🧭 Resumen Ejecutivo
 
-Las herramientas más solicitadas son los **dashboards gráficos**, **calendarios**, y funcionalidades de **comunicación directa** y **asignación de tareas** para fomentar el trabajo colaborativo.  
+El análisis de las entrevistas revela una necesidad crítica y compartida entre **instructores** y **aprendices** por un **sistema digital centralizado** que permita optimizar el seguimiento, la comunicación y la gestión integral de los proyectos académicos en el SENA.  
 
-El sistema es percibido como una solución valiosa que aportará eficiencia, orden y una comunicación más fluida entre todas las partes involucradas.
+El principal problema identificado es la **falta de agilidad y visibilidad en tiempo real del progreso de los proyectos**, lo que genera dificultades en la supervisión docente y en la coordinación entre los miembros del equipo.  
+
+Las funcionalidades clave identificadas para una **versión inicial (MVP)** son:
+
+- 📊 **Visualización del porcentaje de avance**  
+- 📅 **Gestión de fechas de entrega**  
+- 📦 **Definición clara de entregables**  
+- 💬 **Comunicación directa entre aprendices e instructores**  
+- 🧭 **Dashboard de seguimiento y trazabilidad de tareas**
+
+El sistema es percibido como una **solución estratégica** que aportará **eficiencia, orden, transparencia y una comunicación más fluida** entre todos los actores del proceso formativo.
 
 ---
 
 ## 1️⃣ Problema Central: Brecha en el Seguimiento de Proyectos
-La principal deficiencia identificada en el proceso actual es la dificultad que enfrentan los instructores para conocer el progreso real y actualizado de los proyectos de los aprendices. Esta falta de visibilidad ágil constituye el obstáculo más significativo para una supervisión efectiva.
 
-> 💬 **Declaración Clave (Instructor):**  
-> "El principal problema en este momento es la agilidad con la que los instructores podemos saber el progreso real de los aprendices en el tema de sus proyectos".
+La deficiencia más significativa identificada en el proceso actual es la **falta de herramientas dinámicas que permitan conocer el estado real de los proyectos en tiempo real**.  
+Esta brecha impide una supervisión efectiva y retrasa la toma de decisiones pedagógicas oportunas.
+
+> 💬 “El principal problema en este momento es la agilidad con la que los instructores podemos saber el progreso real de los aprendices en el tema de sus proyectos.”  
+> — Instructor entrevistado
+
+### Impacto actual:
+- Supervisión manual y desactualizada.  
+- Pérdida de trazabilidad del avance del proyecto.  
+- Descoordinación entre equipos y falta de retroalimentación oportuna.
 
 ---
 
 ## 2️⃣ Perspectiva y Requisitos del Instructor
-El rol del instructor demanda herramientas que ofrezcan una visión clara y rápida del estado de cada proyecto. La funcionalidad debe centrarse en la **medición del progreso** y la **claridad de los objetivos**.
+
+El rol del instructor requiere **herramientas analíticas y visuales** que permitan evaluar de forma rápida el estado de múltiples proyectos, sin depender de reportes manuales o documentos dispersos.
 
 ### 🔹 2.1. Funcionalidades Mínimas Indispensables (MVP)
-Para una primera versión del software, se consideran esenciales las siguientes características:
 
-- 📈 **Medición de Progreso:** Identificar qué porcentaje del proyecto se ha completado en la fecha actual.  
-- ⏰ **Gestión de Plazos:** Tener claridad sobre la fecha final de entrega del proyecto.  
-- 📋 **Definición de Entregables:** Especificar claramente cuáles son los entregables que se deben presentar en la fecha final.
+| Funcionalidad | Descripción |
+|----------------|-------------|
+| 📈 **Medición de Progreso** | Mostrar el porcentaje de avance en tiempo real y por fases del proyecto. |
+| ⏰ **Gestión de Plazos** | Establecer fechas de entrega y recibir alertas automáticas por retrasos. |
+| 📋 **Definición de Entregables** | Asociar entregables a cada etapa con indicadores de cumplimiento. |
 
 ### 🔹 2.2. Herramientas y Visualización Sugeridas
-Se manifiesta una clara preferencia por las representaciones visuales e interactivas sobre los formatos tabulares estáticos.
 
-- 🗓️ **Calendario:** Implementar un calendario para visualizar de forma ágil las actividades y fechas clave.  
-- 📊 **Dashboard Gráfico:** La herramienta más solicitada es un dashboard que permita ver el progreso de manera gráfica, en lugar de "una presentación a punta de tablas".
+Los instructores priorizan interfaces **gráficas, claras e interactivas**, que sustituyan los formatos tabulares estáticos.
+
+- 🗓️ **Calendario Académico Integrado:** Visualización de actividades, entregas y revisiones.  
+- 📊 **Dashboard Gráfico:** Módulo central con indicadores de avance, tareas pendientes y alertas.  
+- 📬 **Notificaciones Automatizadas:** Recordatorios y seguimiento de entregas próximas.
 
 ---
 
 ## 3️⃣ Perspectiva y Necesidades del Aprendiz
-Desde el punto de vista de los estudiantes, las necesidades se centran en la **eficiencia**, la **colaboración en equipo** y la **comunicación fluida** tanto con sus pares como con el instructor.
+
+Desde la óptica de los aprendices, el sistema debe ser una **herramienta de apoyo colaborativo** que facilite la gestión de tareas, el trabajo en equipo y la comunicación con el instructor.
 
 ### 🔹 3.1. Necesidades Fundamentales
-- ⚙️ **Eficiencia y Asistencia:** Se busca una mayor eficiencia en el desarrollo del proyecto y una asistencia constante por parte del instructor para el seguimiento de las solicitudes.  
-- 👀 **Visibilidad Compartida:** Es crucial que todos los integrantes del equipo puedan ver el "transcurso de la tarea" para cumplir con los requisitos.  
-- 🤝 **Coordinación de Equipo:** Existe una preocupación por la descoordinación cuando no hay una asignación clara de responsabilidades.  
-  > "Cada uno pues hace lo que lo que quiere y pues a veces se descoordina uno en la misión que uno tiene".
+
+| Necesidad | Descripción |
+|------------|-------------|
+| ⚙️ **Eficiencia y Asistencia** | Mayor soporte y seguimiento continuo del docente. |
+| 👀 **Visibilidad Compartida** | Todos los integrantes deben ver el avance y responsabilidades del equipo. |
+| 🤝 **Coordinación de Equipo** | Evitar duplicidad o ausencia de tareas mediante asignación clara de roles. |
+
+> 💬 “Cada uno hace lo que quiere y a veces se descoordina uno en la misión que tiene.”  
+> — Aprendiz entrevistado
 
 ### 🔹 3.2. Funcionalidades y Herramientas Deseadas
-Las sugerencias de los aprendices apuntan a la creación de un ecosistema colaborativo e integrado.
 
-| 💡 Característica Sugerida | 🧰 Descripción |
-|-----------------------------|----------------|
-| 💬 **Comunicación Directa** | Un sistema de comunicación "tipo WhatsApp" para interactuar con los integrantes del equipo y directamente con el profesor. |
-| 🧾 **Asignación de Tareas** | Una herramienta para asignar tareas específicas a cada integrante del equipo. |
-| ⏳ **Trazabilidad y Cronograma** | Funcionalidades para dar seguimiento al historial del proyecto y visualizarlo en una línea de tiempo. |
-| 💻 **Entorno de Desarrollo** | Un entorno que permita "dar un ejecutable del código", considerado fundamental para el éxito del proyecto. |
+| Característica | Descripción |
+|-----------------|-------------|
+| 💬 **Comunicación Directa** | Chat interno tipo “WhatsApp” para interacción entre estudiantes e instructor. |
+| 🧾 **Asignación de Tareas** | Panel para distribuir tareas específicas entre los miembros del equipo. |
+| ⏳ **Trazabilidad y Cronograma** | Línea de tiempo interactiva para visualizar hitos y avances. |
+| 💻 **Entorno de Desarrollo Integrado** | Espacio para subir ejecutables o enlaces a repositorios del proyecto. |
 
 ---
 
 ## 4️⃣ Consideraciones Técnicas y de Implementación
 
-| 🎯 Objetivo | 🧩 Propósito |
-|--------------|--------------|
-| 💬 Facilitar la comunicación instantánea y centralizada | Mejorar la organización y evitar la descoordinación |
-| ⏱️ Entender la evolución del trabajo y gestionar los plazos | Integrar el desarrollo técnico dentro de la misma plataforma |
+El diseño técnico debe garantizar **usabilidad, rendimiento y compatibilidad con herramientas TIC ya utilizadas** por la comunidad educativa.
 
-Las entrevistas también arrojaron luz sobre los **requisitos técnicos** y las **herramientas externas** que podrían optimizar la plataforma y los flujos de trabajo de los usuarios.
+### 🔹 4.1. Objetivos Técnicos
 
-### 🔹 4.1. Estructura de la Base de Datos
-El diseño de la base de datos debe priorizar los siguientes atributos para vincular proyectos, entregables y usuarios de manera efectiva:
-- ⚙️ Facilidad de uso  
-- ⚡ Rendimiento óptimo  
-- 🧠 Buena capacidad de solución de problemas al editar, comprimir o manejar la plataforma
+| Objetivo | Propósito |
+|-----------|------------|
+| 💬 **Comunicación instantánea y centralizada** | Evitar descoordinación y pérdida de información. |
+| ⏱️ **Gestión eficiente del tiempo y entregas** | Controlar cronogramas y prioridades desde una sola interfaz. |
+| 🧩 **Integración del desarrollo técnico** | Permitir que el código, los entregables y la documentación convivan en el mismo entorno. |
 
-### 🔹 4.2. Herramientas Externas para la Optimización
-Se identificaron varias herramientas tecnológicas (TICs) que los usuarios ya consideran valiosas y podrían integrarse o ser compatibles con el sistema:
+### 🔹 4.2. Diseño de Base de Datos
 
-- 🐙 **GitHub:** Para el control de versiones del código.  
-- 📊 **Documentos de Excel:** Para la gestión de datos.  
-- ☁️ **Google Drive:** Para el almacenamiento y recopilación de documentos, especialmente durante la fase de gestión de requisitos.
+La base de datos debe vincular **usuarios, roles, proyectos y entregables** con una estructura flexible y escalable:
+
+- 🔹 Facilidad de uso y mantenimiento.  
+- ⚡ Rendimiento óptimo en consultas concurrentes.  
+- 🧠 Soporte para trazabilidad, edición y control de versiones.
+
+### 🔹 4.3. Herramientas TIC Complementarias
+
+| Herramienta | Propósito de Integración |
+|--------------|--------------------------|
+| 🐙 **GitHub** | Control de versiones del código fuente y repositorios del proyecto. |
+| 📊 **Microsoft Excel / Google Sheets** | Exportación y análisis de datos. |
+| ☁️ **Google Drive** | Almacenamiento de entregables y documentación compartida. |
+| 📧 **Correo Institucional / Notificaciones Push** | Comunicación formal y avisos automáticos. |
 
 ---
 
 ## 5️⃣ Beneficios Anticipados y Validación del Concepto
-El proyecto es percibido de manera muy positiva, con un consenso sobre su potencial para resolver problemas existentes y mejorar significativamente el proceso académico.
 
-- 🤝 **Mejora en la Colaboración:** La plataforma facilitará una mejor comunicación entre compañeros para "llegar a ideas más fijas" y potenciará el trabajo colaborativo.  
-- 🧑‍🏫 **Interacción Directa con Instructores:** Se valora la posibilidad de que los profesores puedan interactuar en la plataforma para "resolver dudas y hacer aportes" al proyecto en curso.  
-- ⚡ **Agilidad en la Retroalimentación:** La digitalización del proceso es un factor clave.  
-  > Como expresó una entrevistada, al subir el trabajo de forma digital, "las correcciones llegarán más rápido".  
-- ✅ **Validación General del Sistema:** Se confirma que la necesidad es compartida por múltiples educadores, concluyendo que "varios profesores necesitan esto para tener un buen ordenamiento de proyectos".
+El proyecto es valorado positivamente tanto por instructores como por aprendices. Existe consenso sobre su potencial para **modernizar la gestión académica** y **reducir tiempos administrativos**.
+
+| Beneficio | Descripción |
+|------------|-------------|
+| 🤝 **Colaboración mejorada** | Fomenta el trabajo en equipo y la construcción conjunta de conocimiento. |
+| 🧑‍🏫 **Interacción directa con instructores** | Canal de comunicación constante y bidireccional. |
+| ⚡ **Agilidad en la retroalimentación** | Las entregas y correcciones se realizan de forma digital e inmediata. |
+| 🧩 **Centralización del proceso académico** | Unifica comunicación, gestión y evaluación en una sola plataforma. |
+
+> 💬 “Varios profesores necesitamos esto para tener un buen ordenamiento de proyectos.”  
+> — Testimonio de validación
+
+---
+
+## 🧠 Conclusión General
+
+El **Sistema de Gestión de Proyectos SENA** representa una **solución integral** para optimizar los procesos de planeación, seguimiento y evaluación de proyectos formativos.  
+La adopción de esta herramienta no solo mejorará la eficiencia operativa, sino que **fortalecerá la autonomía, la colaboración y la transparencia educativa** dentro del ecosistema SENA.  
+
+El análisis de requisitos permite definir un **primer alcance funcional (MVP)** centrado en el seguimiento, la comunicación y la trazabilidad de proyectos, estableciendo las bases para futuras expansiones con módulos de evaluación, estadísticas y reportes automatizados.
+
+---
+
+> ✍️ **Autor:** Equipo de Análisis de Requisitos – Centro de Formación SENA  
+> 📅 **Fecha de elaboración:** 2025-11-12  
+> 🧩 **Documento informativo** – No representa aún especificaciones funcionales finales.
