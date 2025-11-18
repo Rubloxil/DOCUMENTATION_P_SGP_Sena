@@ -28,6 +28,5 @@
 | 🎨 **3. Desarrollador Frontend / Diseñador UI-UX** | *(Programador + Diseñador)* | - Desarrolla la interfaz del usuario (web o app).<br>- Aplica principios de diseño y usabilidad.<br>- Asegura buena experiencia visual y navegación. | Juan Manuel Arcila, Jimmy Santiago Muete |
 | 🧪 **4. QA / Tester** | *(Control de calidad + apoyo en desarrollo)* | - Prueba las funcionalidades.<br>- Reporta errores y verifica soluciones.<br>- Puede apoyar en documentación o automatización de pruebas. | Juan Carlos Sanchez |
 | ⚙️ **5. DevOps / Base de datos** | *(Infraestructura + DBA)* | - Configura entornos de desarrollo y despliegue.<br>- Administra bases de datos.<br>- Supervisa versiones y copias de seguridad. | Dilan David Rueda |
->>>>>>> 53feae7 (asignacion,contenido,integrantes de cada rol)
 
 
