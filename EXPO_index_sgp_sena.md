@@ -2,7 +2,6 @@
 
 ## 👥 Integrantes del Proyecto
 - Dilan David Rueda
-
 - Rubiel Rodriguez
 - Juan Manuel Arcila
 - Juan Carlos Sanchez
