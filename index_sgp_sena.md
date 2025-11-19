@@ -1,12 +1,21 @@
 # 📚 DOCUMENTATION_P_SGP_Sena
 
 ## 👥 Integrantes del Proyecto
-- Dilan David Rueda
 
-- Rubiel Rodriguez
-- Juan Manuel Arcila
-- Juan Carlos Sanchez
-- Jimmy Santiago Muete
+- **Dilan David Rueda**  
+  ![]()
+
+- **Rubiel Rodriguez**  
+  ![]()
+
+- **Juan Manuel Arcila**  
+  ![]()
+
+- **Juan Carlos Sanchez**  
+  
+
+- **Jimmy Santiago Muete**  
+  
 
 ---
 

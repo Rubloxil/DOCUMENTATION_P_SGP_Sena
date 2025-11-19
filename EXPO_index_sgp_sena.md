@@ -3,17 +3,9 @@
 ## 👥 Integrantes del Proyecto
 
 - **Dilan David Rueda**  
-  ![]()
-
 - **Rubiel Rodriguez**  
-  ![]()
-
 - **Juan Manuel Arcila**  
-  ![]()
-
 - **Juan Carlos Sanchez**  
-  
-
 - **Jimmy Santiago Muete**  
   
 
@@ -29,10 +21,9 @@
 - [Integrantes](./README.md#integrantes)
 - [Roles del Equipo de Desarrollo](./README.md#roles-del-equipo-de-desarrollo)
 
-#### 🎯 [EXPO_INFI.md](./EXPO_INFI.md)
 - [Integrantes](./EXPO_INFI.md#integrantes)
 - [Sistema de Gestión de Proyectos SENA](./EXPO_INFI.md#sistema-de-gestion-de-proyectos-sena-)
-- [Pregunta de Investigación](./EXPO_INFI.md#cómo-diseñar-e-implementar-un-sistema-digital-centralizado-que-permita-a-instructores-y-aprendices-del-sena-gestionar-supervisar-y-comunicar-el-avance-de-los-proyectos-académicos-optimizando-la-trasabilidad-el-control-y-la-disponibilidad-de-información-para-facilitar-la-toma-de-decisiones-académicas-y-administrativas)
+- [Pregunta Problemica](./EXPO_INFI.md#cómo-diseñar-e-implementar-un-sistema-digital-centralizado-que-permita-a-instructores-y-aprendices-del-sena-gestionar-supervisar-y-comunicar-el-avance-de-los-proyectos-académicos-optimizando-la-trasabilidad-el-control-y-la-disponibilidad-de-información-para-facilitar-la-toma-de-decisiones-académicas-y-administrativas)
 - [Objetivo General](./EXPO_INFI.md#objetivo-general)
 - [Objetivos Específicos](./EXPO_INFI.md#objetivos-específicos)
 - [Alcance](./EXPO_INFI.md#alcance)
@@ -43,7 +34,7 @@
 
 ### 🧩 Requisitos Funcionales (RF)
 
-#### 📄 [EXPO_INFI.md - RF](./EXPO_INFI.md#-requisitos-funcionales-rf)
+
 
 **RF1: Gestión de Usuarios**
 - [RF1.1: Registro de usuarios](./EXPO_INFI.md#rf11-registro-de-usuarios)
@@ -145,18 +136,11 @@
 
 ---
 
-#### 📄 [Requisitos F Y NF.md - RNF](./Requisitos%20F%20Y%20NF.md#-requisitos-no-funcionales)
-- [1. Seguridad y Privacidad](./Requisitos%20F%20Y%20NF.md#1-seguridad-y-privacidad)
-- [2. Rendimiento y Escalabilidad](./Requisitos%20F%20Y%20NF.md#2-rendimiento-y-escalabilidad)
-- [3. Usabilidad y Accesibilidad](./Requisitos%20F%20Y%20NF.md#3-usabilidad-y-accesibilidad)
-- [4. Compatibilidad](./Requisitos%20F%20Y%20NF.md#4-compatibilidad)
-- [5. Disponibilidad y Mantenibilidad](./Requisitos%20F%20Y%20NF.md#5-disponibilidad-y-mantenibilidad)
-
 ---
 
 ## ⚠️ Restricciones del Sistema
 
-### 📄 [EXPO_INFI.md - Restricciones](./EXPO_INFI.md#restricciones-del-sistema-de-gestión-de-proyectos-sena)
+### 📄 [Restricciones](./EXPO_INFI.md#restricciones-del-sistema-de-gestión-de-proyectos-sena)
 - [Contexto General](./EXPO_INFI.md#contexto-general)
 - [1. Restricciones Técnicas](./EXPO_INFI.md#1-restricciones-técnicas)
 - [2. Restricciones Operativas](./EXPO_INFI.md#2-restricciones-operativas)
