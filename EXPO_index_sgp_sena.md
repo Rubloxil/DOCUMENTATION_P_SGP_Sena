@@ -3,19 +3,19 @@
 ## 👥 Integrantes del Proyecto
 
 - **Dilan David Rueda**  
-  ![](integrantes_1.jpeg)
+  ![]()
 
 - **Rubiel Rodriguez**  
-  ![](integrantes_1.png)
+  ![]()
 
 - **Juan Manuel Arcila**  
-  ![](intregantes_1.jpeg)
+  ![]()
 
 - **Juan Carlos Sanchez**  
-  *Imagen pendiente*
+  
 
 - **Jimmy Santiago Muete**  
-  *Imagen pendiente*
+  
 
 ---
 
