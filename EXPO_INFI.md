@@ -1,11 +1,11 @@
 ### Integrantes:
     *Dilan David Rueda
 
-    *Rubiel Rodriguez
+    *Rubiel Rodríguez
 
     *Juan Manuel Arcila 
 
-    *Juan Carlos Sanchez
+    *Juan Carlos Sánchez
 
     *Jimmy Santiago Muete 
 
@@ -14,17 +14,17 @@
 ## Cómo diseñar e implementar un sistema digital centralizado que permita a instructores y aprendices del SENA gestionar, supervisar y comunicar el avance de los proyectos académicos, optimizando la trasabilidad, el control y la disponibilidad de información, para facilitar la toma de decisiones académicas y administrativas?
 
 # OBJETIVO GENERAL
-## Diseñar e implementar un sistema digital de seguimiento de proyectos para el SENA que optimice el control, la trazabilidad, la comunicación y la gestión del avance académico de los aprendices, mediante la centralización de información, la automatización de procesos y la disponibilidad de datos en tiempo real para facilitar la toma de decisiones académicas y administrativas.
+## Diseñar e implementar un sistema digital de seguimiento de proyectos para el SENA que optimice el control, la trazabilidad, la comunicación y la gestión del avance académico de los aprendices, mediante la centralización de información, la automatización de procesos y la disponibilidad de datos para facilitar la toma de decisiones académicas y administrativas.
 
 # Objetivos Específicos:
 
 * Analizar los procesos actuales de seguimiento de proyectos utilizados en el SENA para identificar necesidades, falencias y oportunidades de mejora en el control académico y administrativo.
 
-* Diseñar la arquitectura funcional de una plataforma digital que permita registrar, gestionar y monitorear en tiempo real los avances, entregables y retroalimentaciones de los aprendices.
+* Diseñar la arquitectura funcional de una plataforma digital que permita registrar, gestionar y monitorear  los avances, entregables y retroalimentaciones de los aprendices.
 
 * Desarrollar los módulos del sistema, incluyendo gestión de usuarios, carga de evidencias, historial de actividades, paneles de progreso y notificaciones automáticas.
 
-* Implementar un modelo de roles y permisos que garantice la seguridad, integridad y accesibilidad de la información según el perfil del usuario (aprendiz, instructor, coordinador).
+* Implementar un modelo de roles y permisos que garantice la seguridad, integridad y accesibilidad de la información según el perfil del usuario (aprendiz, instructor).
 
 * Integrar herramientas de comunicación interna que faciliten el intercambio de información entre instructores y aprendices, reduciendo tiempos de respuesta y mejorando la coordinación académica.
 
@@ -35,9 +35,6 @@
 # ALCANCE:
 ## Por definir
 # 🧩 Requisitos Funcionales (RF)
-
-Los Requisitos Funcionales describen las capacidades que el sistema debe ofrecer para satisfacer las necesidades de los usuarios finales.
-
 ---
 
 ### 🔹 RF1. Gestión de Usuarios
@@ -162,7 +159,7 @@ Los Requisitos Funcionales describen las capacidades que el sistema debe ofrecer
 1. Actualizar estado según avance  
 
 **Criterios de Aceptación:**  
-- Estado actualizado en tiempo real  
+- Estado actualizado  
 **Prioridad:** MUST  
 **Fuente:** Documentación SENA  
 
@@ -184,7 +181,7 @@ Los Requisitos Funcionales describen las capacidades que el sistema debe ofrecer
 
 #### RF3.2: Trazabilidad
 **Descripción:** Permitir visualizar el historial de actividades y entregas por equipo.  
-**Actor:** Instructor / Usuario  
+**Actor:** Instructor / Aprendiz  
 **Precondiciones:** Proyecto con actividades registradas  
 **Flujo Principal:**  
 1. Consultar historial de actividades  
