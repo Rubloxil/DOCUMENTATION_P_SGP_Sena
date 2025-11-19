@@ -5,6 +5,7 @@
 - Rubiel Rodriguez
 - Juan Manuel Arcila
 - Juan Carlos Sanchez
+  ![](https://raw.githubusercontent.com/usuario/repositorio/rama/img/rubiel.jpg)
 - Jimmy Santiago Muete
 
 ---
