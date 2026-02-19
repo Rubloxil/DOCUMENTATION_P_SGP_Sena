@@ -1,0 +1,92 @@
+DISCURSO DE PRESENTACIÓN Sistema de Gestión de Proyectos Académicos –
+SENA
+
+Buenas tardes.
+
+Mi nombre es Rubiel y hoy les presento el Sistema de Gestión de
+Proyectos Académicos, una solución diseñada para optimizar el
+seguimiento, control y evaluación de proyectos formativos dentro del
+entorno SENA.
+
+Este proyecto nace a partir de una necesidad clara: la falta de una
+plataforma estructurada que permita centralizar el registro, seguimiento
+y evaluación de los proyectos académicos, garantizando trazabilidad,
+control y cumplimiento normativo.
+
+OBJETIVO DEL SISTEMA
+
+El objetivo principal es desarrollar una aplicación web que permita:
+
+-   Registrar proyectos académicos.
+-   Asignar instructores responsables.
+-   Realizar seguimiento del estado del proyecto.
+-   Mantener auditoría de acciones.
+-   Garantizar seguridad y protección de datos.
+
+El sistema está diseñado bajo una arquitectura en capas, separando
+presentación, lógica de negocio y persistencia, lo que garantiza
+escalabilidad y mantenibilidad.
+
+DISEÑO TÉCNICO
+
+La solución propuesta contempla:
+
+-   Backend desarrollado en tecnologías como Node.js o PHP.
+-   Base de datos relacional (PostgreSQL o MySQL).
+-   Autenticación basada en JWT.
+-   Encriptación de contraseñas mediante bcrypt.
+-   Control de acceso por roles: Aprendiz e Instructor.
+
+Además, se diseñó un modelo entidad-relación sólido que garantiza
+integridad referencial y trazabilidad de la información.
+
+METODOLOGÍA Y FORMALIDAD
+
+El proyecto incluye:
+
+-   Requisitos funcionales claramente definidos.
+-   Requisitos no funcionales medibles.
+-   Reglas de negocio separadas de la lógica del sistema.
+-   Matriz de trazabilidad.
+-   Diagramas UML formales.
+-   Script SQL listo para implementación.
+
+Esto asegura que el sistema no sea solo una idea conceptual, sino una
+solución técnicamente estructurada y lista para desarrollo.
+
+SEGURIDAD Y CUMPLIMIENTO
+
+El sistema cumple con la Ley 1581 de 2012 sobre protección de datos
+personales.
+
+Incluye:
+
+-   Autenticación obligatoria.
+-   Registro de auditoría.
+-   Restricción de uso a correos institucionales.
+-   Control de estados del proyecto.
+
+Esto garantiza confidencialidad, integridad y disponibilidad de la
+información académica.
+
+IMPACTO ESPERADO
+
+La implementación de este sistema permitirá:
+
+-   Reducir desorganización en la gestión de proyectos.
+-   Mejorar la trazabilidad de evaluaciones.
+-   Centralizar la información académica.
+-   Facilitar el seguimiento institucional.
+
+ESTADO ACTUAL
+
+Actualmente, el proyecto se encuentra en fase de diseño técnico
+completo, listo para pasar a etapa de desarrollo e implementación.
+
+CONCLUSIÓN
+
+Este sistema no solo cumple con los requerimientos académicos del
+programa, sino que está diseñado con visión institucional y escalable,
+permitiendo su evolución futura hacia una solución de mayor alcance.
+
+Muchas gracias.
