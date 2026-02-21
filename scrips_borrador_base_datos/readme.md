@@ -1,0 +1,1 @@
+** Desarrolle el script de la base de datos de su proyecto productivo, solamente creando la base de datos y las    tablas (NO se debe ingresar ningún dato), cada campo debe tener su tipo de dato. 
