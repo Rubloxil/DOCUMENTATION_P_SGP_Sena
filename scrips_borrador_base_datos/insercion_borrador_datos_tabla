@@ -1,0 +1,100 @@
+/* ============================================
+   INSERTAR ROLES
+============================================ */
+INSERT INTO roles (nombre_rol, descripcion) VALUES
+('Administrador', 'Control total del sistema'),
+('Instructor', 'Supervisa proyectos de formación'),
+('Aprendiz', 'Participa en el desarrollo de proyectos');
+
+/* ============================================
+   INSERTAR USUARIOS
+============================================ */
+INSERT INTO usuarios (nombres, apellidos, correo, contrasena, ficha, programa_formacion, id_rol)
+VALUES
+('Carlos', 'Ramirez', 'carlos.ramirez@sena.edu.co', '123456', '2675859', 'ADSO', 3),
+('Laura', 'Gomez', 'laura.gomez@sena.edu.co', '123456', '2675859', 'ADSO', 3),
+('Miguel', 'Torres', 'miguel.torres@sena.edu.co', '123456', '2675859', 'ADSO', 3),
+('Andrea', 'Castro', 'andrea.castro@sena.edu.co', '123456', NULL, 'ADSO', 2),
+('Julian', 'Martinez', 'julian.martinez@sena.edu.co', '123456', NULL, 'ADSO', 1);
+
+/* ============================================
+   INSERTAR PROYECTOS
+============================================ */
+INSERT INTO proyectos (nombre, descripcion, fecha_inicio, fecha_fin, porcentaje_avance, estado, id_instructor)
+VALUES
+('Sistema Gestión Académica', 'Plataforma para gestión de proyectos formativos', '2025-02-01', '2025-11-30', 41.75, 'En desarrollo', 4),
+('App Control Inventario', 'Aplicación web para inventarios empresariales', '2025-03-15', '2025-12-10', 37.20, 'En desarrollo', 4);
+
+/* ============================================
+   EQUIPOS DE PROYECTO
+============================================ */
+INSERT INTO equipos_proyecto (id_proyecto, id_usuario, rol_en_equipo) VALUES
+(1, 1, 'Desarrollador Backend'),
+(1, 2, 'Desarrollador Frontend'),
+(1, 3, 'Base de Datos'),
+(2, 1, 'Analista'),
+(2, 2, 'Frontend');
+
+/* ============================================
+   FASES DEL PROYECTO
+============================================ */
+INSERT INTO fases_proyecto (nombre_fase, descripcion, fecha_inicio, fecha_fin, porcentaje_avance, id_proyecto)
+VALUES
+('Análisis', 'Levantamiento de requisitos', '2025-02-01', '2025-03-10', 100.00, 1),
+('Diseño', 'Arquitectura y modelo de datos', '2025-03-11', '2025-04-20', 93.50, 1),
+('Desarrollo', 'Programación del sistema', '2025-04-21', '2025-08-30', 45.30, 1),
+('Análisis', 'Definición de requerimientos', '2025-03-15', '2025-04-10', 98.70, 2);
+
+/* ============================================
+   ENTREGABLES
+============================================ */
+INSERT INTO entregables (nombre, descripcion, fecha_entrega, fecha_entregado, estado, url_drive, version, id_fase)
+VALUES
+('Documento de requisitos', 'Documento con requisitos funcionales', '2025-03-10', '2025-03-09', 'Entregado', 'https://drive.google.com/doc_req', '1.0', 1),
+('Modelo entidad relación', 'Diseño de base de datos', '2025-04-15', '2025-04-16', 'Entregado con ajustes', 'https://drive.google.com/modelo_er', '1.1', 2),
+('Prototipo interfaz', 'Prototipo en Figma', '2025-05-01', NULL, 'Pendiente', 'https://drive.google.com/prototipo', '0.9', 3);
+
+/* ============================================
+   TAREAS
+============================================ */
+INSERT INTO tareas (titulo, descripcion, fecha_inicio, fecha_vencimiento, estado, prioridad, porcentaje_avance, id_proyecto, id_asignado)
+VALUES
+('Diseñar base de datos', 'Modelo relacional inicial', '2025-03-12', '2025-03-25', 'Completada', 'Alta', 100.00, 1, 3),
+('Crear interfaz login', 'Pantalla de inicio de sesión', '2025-04-22', '2025-05-05', 'En progreso', 'Media', 62.80, 1, 2),
+('Configurar backend', 'API REST inicial', '2025-04-22', '2025-05-10', 'En progreso', 'Alta', 58.40, 1, 1),
+('Diseño inventario', 'Estructura de productos', '2025-04-01', '2025-04-15', 'Completada', 'Alta', 97.00, 2, 1);
+
+/* ============================================
+   MENSAJES
+============================================ */
+INSERT INTO mensajes (contenido, id_remitente, id_proyecto)
+VALUES
+('Ya subí el modelo de base de datos al repositorio.', 3, 1),
+('Revisen el prototipo del login por favor.', 2, 1),
+('Recuerden actualizar el avance del sprint.', 4, 1);
+
+/* ============================================
+   NOTIFICACIONES
+============================================ */
+INSERT INTO notificaciones (titulo, mensaje, tipo, id_usuario)
+VALUES
+('Nueva tarea asignada', 'Se te asignó la tarea Crear interfaz login', 'tarea', 2),
+('Actualización de proyecto', 'El proyecto ha actualizado su avance', 'proyecto', 1),
+('Entrega próxima', 'El entregable Prototipo interfaz vence pronto', 'alerta', 2);
+
+/* ============================================
+   REPOSITORIOS
+============================================ */
+INSERT INTO repositorios (url_github, rama_principal, ultima_actualizacion, id_proyecto)
+VALUES
+('https://github.com/sena/proyecto-gestion', 'main', '2025-05-02 10:20:00', 1),
+('https://github.com/sena/inventario-app', 'master', '2025-05-01 09:15:00', 2);
+
+/* ============================================
+   HISTORIAL DE CAMBIOS
+============================================ */
+INSERT INTO historial_cambios (tabla_afectada, id_registro, accion, id_usuario)
+VALUES
+('tareas', 2, 'UPDATE', 2),
+('entregables', 3, 'INSERT', 3),
+('proyectos', 1, 'UPDATE', 4);
