@@ -1,284 +1,262 @@
 # 💼 Casos de Uso - Sistema de Gestión de Proyectos SENA
 
+---
+
 ## 👥 1. Identificación de Actores
 
-**🎯 Actores Principales:**
-- 👨‍🎓 **Aprendiz:** Estudiante del SENA que desarrolla proyectos de formación  
-- 👨‍🏫 **Instructor:** Docente que supervisa y evalúa los proyectos de los aprendices  
+### 🎯 Actores Principales
+- 👨‍🎓 **Aprendiz:** Desarrolla proyectos formativos y registra avances  
+- 👨‍🏫 **Instructor:** Supervisa, evalúa y retroalimenta proyectos  
 
-**⚙️ Actores Secundarios:**
-- 💻 **Sistema:** Funciones automáticas del sistema (notificaciones, validaciones)
+### ⚙️ Actores Secundarios
+- 💻 **Sistema:** Ejecuta validaciones, notificaciones y procesos automáticos  
 
 ---
 
-## 🧩 2. Casos de Uso Principales
+## 🧩 2. Casos de Uso del Sistema
 
-### 🔐 CU-001: Iniciar Sesión
-**Actor Principal:** 👨‍🎓 Aprendiz, 👨‍🏫 Instructor  
+---
+
+## 🔐 CU-001: Iniciar Sesión
+
+**Actor:** Aprendiz / Instructor  
+
 **Descripción:** Permite el acceso al sistema mediante credenciales válidas  
 
-**✅ Precondiciones:**
-- El usuario debe estar registrado en el sistema del SENA  
-- El sistema debe estar disponible  
+### ✅ Precondiciones
+- Usuario registrado  
+- Sistema disponible  
 
-**🧭 Flujo Principal:**
-1. El usuario accede a la página de inicio de sesión  
-2. Ingresa su número de documento  
-3. Ingresa su contraseña  
-4. Presiona el botón "Iniciar Sesión"  
-5. El sistema valida las credenciales  
-6. El sistema redirige al usuario a su panel principal  
+### 🧭 Flujo Principal
+1. El usuario accede al sistema  
+2. Ingresa credenciales  
+3. El sistema valida información  
+4. Acceso concedido  
 
-**⚠️ Flujos Alternativos:**
-- **FA-001a:** Si las credenciales son incorrectas  
-  - El sistema muestra mensaje de error  
-  - El usuario puede intentar nuevamente  
+### ⚠️ Flujo Alternativo
+- Credenciales incorrectas → mensaje de error  
 
-**📄 Postcondiciones:**
-- El usuario queda autenticado en el sistema  
-- Se registra la hora de acceso  
+### 📄 Postcondición
+- Usuario autenticado  
+
+### 🔗 Requisitos Relacionados
+RF1.2, RNF3.1  
 
 ---
 
-### 🆕 CU-002: Crear Proyecto
-**Actor Principal:** 👨‍🎓 Aprendiz  
-**Descripción:** Permite al aprendiz crear un nuevo proyecto de formación  
+## 🆕 CU-002: Crear Proyecto
 
-**✅ Precondiciones:**
-- El aprendiz debe haber iniciado sesión  
-- El aprendiz debe tener cupo disponible para crear proyectos  
+**Actor:** Aprendiz  
 
-**🧭 Flujo Principal:**
-1. El aprendiz selecciona "Crear Nuevo Proyecto"  
-2. El sistema muestra el formulario de creación  
-3. Ingresa el título del proyecto  
-4. Ingresa la descripción del proyecto  
-5. Selecciona la fecha de inicio  
-6. Selecciona la fecha estimada de finalización  
-7. Presiona "Crear Proyecto"  
-8. El sistema valida la información  
-9. Guarda el proyecto con estado "🗂️ En Planificación"  
-10. Muestra confirmación de creación  
+**Descripción:** Permite crear un nuevo proyecto  
 
-**⚠️ Flujos Alternativos:**
-- **FA-002a:** Si faltan campos obligatorios  
-  - El sistema marca los campos faltantes  
-  - El aprendiz debe completar la información  
+### ✅ Precondiciones
+- Usuario autenticado  
+- No exceder límite de proyectos (RN-001)  
 
-**📄 Postcondiciones:**
-- El proyecto queda creado en el sistema  
-- Aparece en la lista de proyectos del aprendiz  
+### 🧭 Flujo Principal
+1. Accede a módulo de proyectos  
+2. Selecciona "Crear Proyecto"  
+3. Ingresa datos  
+4. Sistema valida  
+5. Sistema guarda proyecto  
+
+### ⚠️ Flujo Alternativo
+- Campos incompletos → error  
+
+### 📄 Postcondición
+- Proyecto creado en estado "En Planificación"  
+
+### 🔗 Requisitos Relacionados
+RF2.1, RN-001  
 
 ---
 
-### 🧑‍🏫 CU-003: Asignar Instructor a Proyecto
-**Actor Principal:** 👨‍🏫 Instructor  
-**Descripción:** Permite al instructor asignarse o ser asignado a supervisar un proyecto  
+## 🧑‍🏫 CU-003: Asignar Instructor a Proyecto
 
-**✅ Precondiciones:**
-- El instructor debe haber iniciado sesión  
-- Debe existir al menos un proyecto sin instructor asignado  
+**Actor:** Instructor  
 
-**🧭 Flujo Principal:**
-1. Accede a "Proyectos Disponibles"  
-2. El sistema muestra la lista de proyectos sin instructor  
-3. Selecciona un proyecto  
-4. Revisa los detalles  
-5. Presiona "Asignarme como Instructor"  
-6. El sistema actualiza el proyecto  
-7. Envía notificación al aprendiz 📩  
+### 🧭 Flujo Principal
+1. Visualiza proyectos disponibles  
+2. Selecciona proyecto  
+3. Se asigna como instructor  
+4. Sistema actualiza  
 
-**📄 Postcondiciones:**
-- El proyecto tiene instructor asignado  
-- El aprendiz recibe notificación  
+### 📄 Postcondición
+- Proyecto con instructor asignado  
+
+### 🔗 Requisitos Relacionados
+RF2.2, RN-002  
 
 ---
 
-### 📈 CU-004: Registrar Avance de Proyecto
-**Actor Principal:** 👨‍🎓 Aprendiz  
-**Descripción:** Permite registrar el progreso realizado en su proyecto  
+## 📈 CU-004: Registrar Avance
 
-**✅ Precondiciones:**
-- El aprendiz debe haber iniciado sesión  
-- El proyecto debe estar en estado "En Desarrollo"  
-- Debe tener instructor asignado  
+**Actor:** Aprendiz  
 
-**🧭 Flujo Principal:**
-1. Selecciona su proyecto activo  
-2. Presiona "Registrar Avance"  
-3. El sistema muestra formulario de avance  
-4. Describe las actividades realizadas  
-5. Indica el porcentaje de avance 📊  
-6. Puede adjuntar archivos 📎 (opcional)  
-7. Presiona "Guardar Avance"  
-8. El sistema valida la información  
-9. Actualiza el progreso  
-10. Notifica al instructor sobre el nuevo avance  
+### 🧭 Flujo Principal
+1. Selecciona proyecto  
+2. Ingresa avance  
+3. Sistema valida porcentaje  
+4. Guarda avance  
 
-**⚠️ Flujos Alternativos:**
-- **FA-004a:** Si el porcentaje de avance no es válido  
-  - El sistema muestra mensaje de error  
-  - El aprendiz debe corregir el valor  
+### ⚠️ Validación
+- Debe registrarse mínimo semanalmente (RN-003)  
 
-**📄 Postcondiciones:**
-- El avance queda registrado  
-- El instructor recibe notificación  
+### 📄 Postcondición
+- Avance registrado  
+
+### 🔗 Requisitos Relacionados
+RF3.1, RF3.2, RN-003  
 
 ---
 
-### 🧾 CU-005: Realizar Seguimiento de Proyecto
-**Actor Principal:** 👨‍🏫 Instructor  
-**Descripción:** Permite al instructor revisar y hacer seguimiento a los proyectos asignados  
+## 🧾 CU-005: Evaluar Proyecto
 
-**✅ Precondiciones:**
-- El instructor debe haber iniciado sesión  
-- Debe tener proyectos asignados  
+**Actor:** Instructor  
 
-**🧭 Flujo Principal:**
-1. Accede a "Mis Proyectos Asignados"  
-2. Visualiza la lista de proyectos  
-3. Selecciona un proyecto para revisar  
-4. El sistema muestra los detalles  
-5. Revisa los avances registrados  
-6. Agrega comentarios de retroalimentación 💬  
-7. Cambia el estado del proyecto  
-8. Presiona "Guardar Seguimiento"  
-9. El sistema actualiza la información  
-10. El sistema notifica al aprendiz  
+### 🧭 Flujo Principal
+1. Accede al proyecto  
+2. Revisa avances  
+3. Agrega retroalimentación  
+4. Cambia estado  
 
-**📄 Postcondiciones:**
-- Los comentarios quedan registrados  
-- El aprendiz recibe retroalimentación  
+### 📄 Postcondición
+- Proyecto actualizado  
+
+### 🔗 Requisitos Relacionados
+RF3.3  
 
 ---
 
-### 🔍 CU-006: Consultar Estado de Proyectos
-**Actor Principal:** 👨‍🎓 Aprendiz, 👨‍🏫 Instructor  
-**Descripción:** Permite consultar el estado actual y el historial de los proyectos  
+## 📋 CU-006: Gestionar Tareas
 
-**✅ Precondiciones:**
-- El usuario debe haber iniciado sesión  
-- Deben existir proyectos en el sistema  
+**Actor:** Instructor / Aprendiz  
 
-**🧭 Flujo Principal:**
-1. Selecciona "Consultar Proyectos"  
-2. El sistema muestra filtros de búsqueda 🔎  
-3. Filtra por estado, fecha o título  
-4. Presiona "Buscar"  
-5. El sistema muestra resultados  
-6. Selecciona un proyecto para ver detalles  
-7. Visualiza información completa del proyecto  
+### 🧭 Flujo Principal
+1. Crear tarea  
+2. Asignar responsable  
+3. Actualizar estado  
 
-**📄 Postcondiciones:**
-- El usuario obtiene la información solicitada  
+### 📄 Postcondición
+- Tarea registrada  
+
+### 🔗 Requisitos Relacionados
+RF5.1, RF5.2  
+
+---
+
+## 📦 CU-007: Gestionar Entregables
+
+**Actor:** Aprendiz  
+
+### 🧭 Flujo Principal
+1. Subir archivo  
+2. Asociar a fase  
+3. Registrar versión  
+
+### 📄 Postcondición
+- Entregable almacenado  
+
+### 🔗 Requisitos Relacionados
+RF2.3, RF6.2  
+
+---
+
+## 💬 CU-008: Enviar Mensajes
+
+**Actor:** Aprendiz / Instructor  
+
+### 🧭 Flujo Principal
+1. Accede al chat  
+2. Escribe mensaje  
+3. Sistema envía  
+
+### 📄 Postcondición
+- Mensaje almacenado  
+
+### 🔗 Requisitos Relacionados
+RF4.1  
+
+---
+
+## 🔔 CU-009: Recibir Notificaciones
+
+**Actor:** Sistema  
+
+### 🧭 Flujo Principal
+1. Detecta evento  
+2. Genera notificación  
+3. Envía al usuario  
+
+### 📄 Postcondición
+- Usuario notificado  
+
+### 🔗 Requisitos Relacionados
+RF3.4, RF4.4  
+
+---
+
+## 📊 CU-010: Generar Reportes
+
+**Actor:** Instructor  
+
+### 🧭 Flujo Principal
+1. Selecciona tipo de reporte  
+2. Sistema procesa datos  
+3. Genera archivo  
+
+### 📄 Postcondición
+- Reporte disponible  
+
+### 🔗 Requisitos Relacionados
+RF6.3  
+
+---
+
+## 🔍 CU-011: Consultar Proyectos
+
+**Actor:** Aprendiz / Instructor  
+
+### 🧭 Flujo Principal
+1. Filtrar proyectos  
+2. Visualizar resultados  
+
+### 📄 Postcondición
+- Información consultada  
+
+### 🔗 Requisitos Relacionados
+RF2.5  
 
 ---
 
 ## 📊 3. Estados del Proyecto
-- 🗂️ **En Planificación:** Proyecto creado, esperando instructor  
-- ⚙️ **En Desarrollo:** Proyecto en ejecución  
-- 🧮 **En Revisión:** Proyecto completado, esperando evaluación final  
-- ✅ **Finalizado:** Proyecto completado y evaluado  
-- ⏸️ **Suspendido:** Proyecto pausado  
+
+- 🗂️ En Planificación  
+- ⚙️ En Desarrollo  
+- 🧮 En Revisión  
+- ✅ Finalizado  
+- ⏸️ Suspendido  
 
 ---
 
 ## ⚖️ 4. Reglas de Negocio
 
-**📘 RN-001: Límite de Proyectos**  
-- Un aprendiz puede tener máximo **2 proyectos activos** simultáneamente  
-
-**📘 RN-002: Asignación de Instructores**  
-- Un instructor puede supervisar máximo **10 proyectos activos**  
-
-**📘 RN-003: Registro de Avances**  
-- Los avances deben registrarse **al menos una vez por semana**  
-
-**📘 RN-004: Duración de Proyectos**  
-- Los proyectos deben durar **entre 1 y 6 meses**  
+- **RN-001:** Máximo 2 proyectos activos por aprendiz  
+- **RN-002:** Máximo 10 proyectos por instructor  
+- **RN-003:** Avances mínimos semanales  
+- **RN-004:** Duración entre 1 y 6 meses  
 
 ---
 
-## 🧠 5. Diagrama de Casos de Uso (Descripción)
+## 🧠 5. Observaciones Finales
 
-# 📊 5. Diagrama de Casos de Uso (Descripción)
-**Sistema de Gestión de Proyectos SENA**
-
-- 👨‍🎓 **Aprendiz**
-  - 🔐 Iniciar Sesión
-  - 🆕 Crear Proyecto
-  - 📈 Registrar Avance
-  - 🔍 Consultar Estado
-
-- 👨‍🏫 **Instructor**
-  - 🔐 Iniciar Sesión
-  - 🧑‍🏫 Asignar Instructor a Proyecto
-  - 🧾 Realizar Seguimiento
-  - 🔍 Consultar Estado
+- Todos los casos están alineados con los requisitos funcionales  
+- Se garantiza trazabilidad entre análisis, diseño y desarrollo  
+- El documento cubre completamente el alcance del MVP  
 
 ---
 
-## 🧩 6. Caso de Uso Extendido: CU-002 Crear Proyecto
-
-**🆔 ID:** CU-002  
-**🎭 Actor Principal:** 👨‍🎓 Aprendiz  
-**📏 Nivel:** Usuario  
-**📝 Descripción:** El aprendiz crea un nuevo proyecto formativo en el sistema  
-
-**✅ Precondiciones:**
-- El aprendiz tiene una sesión activa  
-- No ha excedido el límite de proyectos activos (máximo 2)  
-- Tiene permisos necesarios  
-
-**🏁 Garantías de Éxito:**
-- El proyecto queda registrado en la base de datos  
-- Aparece en la lista personal  
-- Queda disponible para asignación de instructor  
-
-**🧭 Escenario Principal de Éxito:**
-1. El aprendiz abre el menú principal  
-2. Hace clic en "Crear Nuevo Proyecto"  
-3. El sistema presenta formulario con campos obligatorios  
-4. Completa **Título del Proyecto** (máx. 100 caracteres)  
-5. Completa **Descripción** (máx. 500 caracteres)  
-6. Selecciona **Fecha de Inicio** (no anterior a hoy)  
-7. Selecciona **Fecha de Finalización** (mínimo 30 días después)  
-8. Hace clic en **Crear Proyecto**  
-9. El sistema valida campos  
-10. Verifica coherencia de fechas  
-11. Asigna **ID único**  
-12. Establece estado inicial como **🗂️ En Planificación**  
-13. Guarda el proyecto en la base de datos 💾  
-14. Muestra confirmación con ID del proyecto  
-15. Redirige a la vista de detalles  
-
-**⚠️ Extensiones (Flujos Alternativos):**
-- **3a.** Ha alcanzado el límite máximo de proyectos  
-  - Muestra mensaje: "⚠️ Ha alcanzado el límite de proyectos activos (2)"  
-  - Sugiere finalizar un proyecto existente  
-
-- **9a.** Faltan campos obligatorios  
-  - Resalta los campos en rojo 🔴  
-  - Muestra mensaje: "Complete todos los campos obligatorios"  
-
-- **10a.** Fechas no coherentes  
-  - Muestra mensaje: "La fecha de finalización debe ser posterior a la fecha de inicio"  
-
-- **13a.** Error en la base de datos  
-  - Muestra mensaje: "⚙️ Error interno del sistema. Intente nuevamente"  
-  - Registra el error en el log  
-
-**⚡ Requerimientos Especiales:**
-- Respuesta del sistema < 3 segundos  
-- Interfaz compatible con navegadores modernos 🌐  
-- Validación automática de fechas 📅  
-
-**💾 Variables de Tecnología y Datos:**
-- **Título:** Texto, obligatorio, máx. 100 caracteres  
-- **Descripción:** Texto, obligatorio, máx. 500 caracteres  
-- **Fecha Inicio:** Fecha, formato DD/MM/AAAA  
-- **Fecha Fin:** Fecha, formato DD/MM/AAAA  
-- **Estado:** "🗂️ En Planificación" por defecto  
-- **ID Usuario:** Número entero (sesión activa)  
-
-**📆 Frecuencia de Ocurrencia:** Semanal por aprendiz  
+**📌 Versión:** 2.0  
+**📌 Estado:** Final - Listo para entrega  
+**📌 Proyecto:** Sistema de Gestión de Proyectos SENA  
