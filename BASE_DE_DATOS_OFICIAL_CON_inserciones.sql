@@ -234,14 +234,12 @@ INSERT INTO historial_cambios (tabla_afectada, id_registro, accion, id_usuario) 
 ('tareas',1,'INSERT',3);
 
 
-SELECT * FROM usuarios
-WHERE nombres LIKE 'J%';
+-- SELECT * FROM usuarios WHERE nombres LIKE 'J%';
 
-SELECT * FROM usuarios
-WHERE correo LIKE '%mail.com';
+-- SELECT * FROM usuarios WHERE correo LIKE '%mail.com';
 
 SELECT * FROM proyectos
-WHERE fecha_inicio BETWEEN '2025-01-01' AND '2025-03-01';
+WHERE fecha_inicio BETWEEN '2026-02-02' AND '2025-04-14';
 
 SELECT * FROM tareas
 WHERE porcentaje_avance BETWEEN 50 AND 100;
@@ -252,10 +250,10 @@ WHERE id_rol IN (1,2);
 SELECT * FROM proyectos
 WHERE estado IN ('Activo','Planeado');
 
-SELECT * FROM proyectos
+SELECT * FROM proyectos -- Auditoria
 WHERE fecha_fin IS NULL;
 
-SELECT * FROM entregables
+SELECT * FROM entregables -- Auditoria 
 WHERE fecha_entregado IS NOT NULL;
 
 SELECT * FROM usuarios
