@@ -13,11 +13,9 @@
     🏢 SENA – Centro de Formación: Beneficiario institucional.
 
 ### 👨‍💻 Integrantes:
-    *Dilan David Rueda 👤  
     *Rubiel Rodriguez 👤  
     *Juan Manuel Arcila 👤  
     *Juan Carlos Sanchez 👤  
-    *Jimmy Santiago Muete 👤  
 
 # 🛠️ Roles del Equipo de Desarrollo
 
