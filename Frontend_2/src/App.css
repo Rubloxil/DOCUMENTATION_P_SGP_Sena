@@ -1,0 +1,35 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login";
+import DashboardAdmin from "./pages/DashboardAdmin";
+import Usuarios from "./pages/Usuarios";
+import Aprendices from "./pages/Aprendices";
+import Instructores from "./pages/Instructores";
+import Fichas from "./pages/Fichas";
+import Proyectos from "./pages/Proyectos";
+import Reportes from "./pages/Reportes";
+import Alertas from "./pages/Alertas";
+import Configuracion from "./pages/Configuracion";
+import Mensajes from "./pages/Mensajes";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<DashboardAdmin />} />
+        <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/aprendices" element={<Aprendices />} />
+        <Route path="/instructores" element={<Instructores />} />
+        <Route path="/fichas" element={<Fichas />} />
+        <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/reportes" element={<Reportes />} />
+        <Route path="/alertas" element={<Alertas />} />
+        <Route path="/mensajes" element={<Mensajes />} />
+        <Route path="/configuracion" element={<Configuracion />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;

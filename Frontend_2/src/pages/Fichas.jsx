@@ -1,0 +1,1 @@
+export default function Fichas(){return <div>Fichas</div>}
