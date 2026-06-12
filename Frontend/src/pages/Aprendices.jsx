@@ -1,1 +1,0 @@
-export default function Aprendices(){return <div>Aprendices</div>}
