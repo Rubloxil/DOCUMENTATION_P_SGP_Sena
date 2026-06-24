@@ -152,10 +152,57 @@ CREATE TABLE repositorios (
 ============================================ */
 CREATE TABLE historial_cambios (
     id_historial INT PRIMARY KEY AUTO_INCREMENT,
-    tabla_afectada VARCHAR(100),
-    id_registro INT,
-    accion VARCHAR(50),
+    descripcion TEXT NOT NULL,
     fecha_cambio DATETIME DEFAULT CURRENT_TIMESTAMP,
-    id_usuario INT,
+    id_usuario INT NOT NULL,
+    id_proyecto INT NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_proyecto) REFERENCES proyectos(id_proyecto)
+);
+
+CREATE TABLE comentarios (
+    id_comentario INT PRIMARY KEY AUTO_INCREMENT,
+    contenido TEXT NOT NULL,
+    fecha_comentario DATETIME DEFAULT CURRENT_TIMESTAMP,
+    id_usuario INT NOT NULL,
+    id_entregable INT NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_entregable) REFERENCES entregables(id_entregable)
+);
+
+CREATE TABLE archivos (
+    id_archivo INT PRIMARY KEY AUTO_INCREMENT,
+    nombre_archivo VARCHAR(255) NOT NULL,
+    ruta_archivo VARCHAR(255) NOT NULL,
+    fecha_subida DATETIME DEFAULT CURRENT_TIMESTAMP,
+    id_entregable INT NOT NULL,
+    FOREIGN KEY (id_entregable) REFERENCES entregables(id_entregable)
+);
+CREATE TABLE evaluaciones (
+    id_evaluacion INT PRIMARY KEY AUTO_INCREMENT,
+    calificacion DECIMAL(5,2) NOT NULL,
+    comentarios TEXT,
+    fecha_evaluacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    id_entregable INT NOT NULL,
+    id_usuario INT NOT NULL,
+    FOREIGN KEY (id_entregable) REFERENCES entregables(id_entregable),
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
+);
+CREATE TABLE reuniones (
+    id_reunion INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(150) NOT NULL,
+    descripcion TEXT,
+    fecha_reunion DATETIME NOT NULL,
+    lugar VARCHAR(255),
+    id_proyecto INT NOT NULL,
+    FOREIGN KEY (id_proyecto) REFERENCES proyectos(id_proyecto)
+);
+
+CREATE TABLE GITHUB_INTEGRATION (
+    id_integration INT PRIMARY KEY AUTO_INCREMENT,
+    github_username VARCHAR(100) NOT NULL,
+    github_token VARCHAR(255) NOT NULL,
+    fecha_integracion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    id_usuario INT NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
 );
