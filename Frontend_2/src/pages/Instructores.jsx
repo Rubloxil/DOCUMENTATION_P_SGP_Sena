@@ -1,1 +1,0 @@
-export default function Instructores(){return <div>Instructores</div>}
