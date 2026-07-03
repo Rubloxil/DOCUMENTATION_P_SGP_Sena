@@ -35,7 +35,7 @@ def listar_usuarios(
         consulta = consulta.filter(Usuario.estado == estado)
     return consulta.offset(skip).limit(limit).all()
 
-
+#Los get m,anejarlos por parametros diferentes a ID
 @router.get("/{usuario_id}", response_model=UsuarioResponse, summary="Obtener un usuario por id (path param)")
 def obtener_usuario(usuario_id: int, db: Session = Depends(get_db)):
     usuario = db.query(Usuario).filter(Usuario.id_usuario == usuario_id).first()
