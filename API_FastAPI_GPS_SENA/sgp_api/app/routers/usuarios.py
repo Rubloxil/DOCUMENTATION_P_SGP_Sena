@@ -36,11 +36,11 @@ def listar_usuarios(
     return consulta.offset(skip).limit(limit).all()
 
 #Los get m,anejarlos por parametros diferentes a ID
-@router.get("/{usuario_id}", response_model=UsuarioResponse, summary="Obtener un usuario por id (path param)")
-def obtener_usuario(usuario_id: int, db: Session = Depends(get_db)):
-    usuario = db.query(Usuario).filter(Usuario.id_usuario == usuario_id).first()
+@router.get("/{usuario_cc}", response_model=UsuarioResponse, summary="Obtener un usuario por cc (path param)")
+def obtener_usuario(usuario_cc: str, db: Session = Depends(get_db)):
+    usuario = db.query(Usuario).filter(Usuario.usuario_cc == usuario_cc).first()
     if not usuario:
-        raise NotFoundException("usuario", usuario_id)
+        raise NotFoundException("usuario", usuario_cc)
     return usuario
 
 
@@ -57,11 +57,11 @@ def crear_usuario(datos: UsuarioCreate, db: Session = Depends(get_db)):
     return nuevo
 
 
-@router.put("/{usuario_id}", response_model=UsuarioResponse, summary="Actualizar usuario")
-def actualizar_usuario(usuario_id: int, datos: UsuarioUpdate, db: Session = Depends(get_db)):
-    usuario = db.query(Usuario).filter(Usuario.id_usuario == usuario_id).first()
+@router.put("/{usuario_cc}", response_model=UsuarioResponse, summary="Actualizar usuario")
+def actualizar_usuario(usuario_cc: str, datos: UsuarioUpdate, db: Session = Depends(get_db)):
+    usuario = db.query(Usuario).filter(Usuario.usuario_cc == usuario_cc).first()
     if not usuario:
-        raise NotFoundException("usuario", usuario_id)
+        raise NotFoundException("usuario", usuario_cc)
 
     for campo, valor in datos.model_dump(exclude_unset=True).items():
         setattr(usuario, campo, valor)
@@ -71,11 +71,11 @@ def actualizar_usuario(usuario_id: int, datos: UsuarioUpdate, db: Session = Depe
     return usuario
 
 
-@router.delete("/{usuario_id}", status_code=status.HTTP_204_NO_CONTENT, summary="Eliminar usuario")
-def eliminar_usuario(usuario_id: int, db: Session = Depends(get_db)):
-    usuario = db.query(Usuario).filter(Usuario.id_usuario == usuario_id).first()
+@router.delete("/{usuario_cc}", status_code=status.HTTP_204_NO_CONTENT, summary="Eliminar usuario")
+def eliminar_usuario(usuario_cc: str, db: Session = Depends(get_db)):
+    usuario = db.query(Usuario).filter(Usuario.usuario_cc == usuario_cc).first()
     if not usuario:
-        raise NotFoundException("usuario", usuario_id)
+        raise NotFoundException("usuario", usuario_cc)
     db.delete(usuario)
     db.commit()
     return None

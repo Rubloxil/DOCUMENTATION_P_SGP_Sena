@@ -22,7 +22,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from .middlewares import LoggingAndTimingMiddleware
+from ..middleware.middlewares import LoggingAndTimingMiddleware
 from .exceptions import (
     AppException, NotFoundException, DuplicateException,
     InvalidCredentialsException, ForeignKeyException,

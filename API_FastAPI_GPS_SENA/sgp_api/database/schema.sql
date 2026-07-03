@@ -18,6 +18,7 @@ CREATE TABLE roles (
 -- TABLA USUARIOS
 -- ============================================
 CREATE TABLE usuarios (
+    usuario_cc VARCHAR(20) NOT NULL UNIQUE,
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nombres VARCHAR(100) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
